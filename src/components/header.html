@@ -1,0 +1,93 @@
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/george-buchan-consulting" class="flex items-center gap-3 group" data-link>
+      <div class="bg-white rounded-lg p-1">
+        <img src="src/assets/images/gbc-logo.png" alt="GBC" class="h-10 w-auto" />
+      </div>
+      <span class="hidden sm:inline font-display font-semibold tracking-tight text-gray-900">
+        George Buchan Consulting
+      </span>
+    </a>
+
+    <!-- Navigation desktop -->
+    <nav class="hidden lg:flex items-center gap-7">
+      <a href="/george-buchan-consulting/services" data-i18n="nav-services" data-link
+        class="relative text-sm font-medium text-gray-800 hover:text-[#034c65] transition-colors group py-1 nav-link">
+        Mes Services
+        <span
+          class="absolute left-0 -bottom-0.5 h-px w-0 bg-[#034c65] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="/george-buchan-consulting/method" data-i18n="nav-method" data-link
+        class="relative text-sm font-medium text-gray-800 hover:text-[#034c65] transition-colors group py-1 nav-link">
+        Ma Méthode
+        <span
+          class="absolute left-0 -bottom-0.5 h-px w-0 bg-[#034c65] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="/george-buchan-consulting/perspectives" data-i18n="nav-blog" data-link
+        class="relative text-sm font-medium text-gray-800 hover:text-[#034c65] transition-colors group py-1 nav-link">
+        Perspectives
+        <span
+          class="absolute left-0 -bottom-0.5 h-px w-0 bg-[#034c65] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="/george-buchan-consulting/download" data-i18n="nav-downloads" data-link
+        class="relative text-sm font-medium text-gray-800 hover:text-[#034c65] transition-colors group py-1 nav-link">
+        Téléchargements
+        <span
+          class="absolute left-0 -bottom-0.5 h-px w-0 bg-[#034c65] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="/george-buchan-consulting/contact" data-i18n="nav-contact" data-link
+        class="relative text-sm font-medium text-gray-800 hover:text-[#034c65] transition-colors group py-1 nav-link">
+        Contact
+        <span
+          class="absolute left-0 -bottom-0.5 h-px w-0 bg-[#034c65] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+    </nav>
+
+    <!-- Langue + Menu mobile -->
+    <div class="flex items-center gap-3">
+      <!-- Sélecteur de langue -->
+      <div class="flex items-center rounded-full overflow-hidden text-xs font-semibold border border-gray-300">
+        <button id="btn-fr" class="px-3 py-1.5 transition bg-[#034c65] text-white" aria-label="Français">
+          🇫🇷 FR
+        </button>
+        <button id="btn-en" class="px-3 py-1.5 transition hover:bg-gray-100" aria-label="English">
+          🇬🇧 EN
+        </button>
+      </div>
+
+      <!-- Bouton menu mobile -->
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md hover:bg-gray-100 text-gray-900" aria-label="Menu">
+        <svg id="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg id="close-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Menu mobile -->
+  <div id="mobile-menu" class="lg:hidden hidden bg-white/95 backdrop-blur-md border-t border-gray-200">
+    <nav class="flex flex-col p-6 gap-4">
+      <a href="/george-buchan-consulting" data-i18n="nav-home" data-link
+        class="text-base font-medium text-gray-800 hover:text-[#034c65] mobile-nav-link">Accueil</a>
+      <a href="/george-buchan-consulting/services" data-i18n="nav-services" data-link
+        class="text-base font-medium text-gray-800 hover:text-[#034c65] mobile-nav-link">Mes Services</a>
+      <a href="/george-buchan-consulting/method" data-i18n="nav-method" data-link
+        class="text-base font-medium text-gray-800 hover:text-[#034c65] mobile-nav-link">Ma Méthode</a>
+      <a href="/george-buchan-consulting/perspectives" data-i18n="nav-blog" data-link
+        class="text-base font-medium text-gray-800 hover:text-[#034c65] mobile-nav-link">Perspectives</a>
+      <a href="/george-buchan-consulting/download" data-i18n="nav-downloads" data-link
+        class="text-base font-medium text-gray-800 hover:text-[#034c65] mobile-nav-link">Téléchargements</a>
+      <a href="/george-buchan-consulting/contact" data-i18n="nav-contact" data-link
+        class="text-base font-medium text-gray-800 hover:text-[#034c65] mobile-nav-link">Contact</a>
+    </nav>
+  </div>
+</header>

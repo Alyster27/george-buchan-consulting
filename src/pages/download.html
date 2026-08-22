@@ -1,0 +1,42 @@
+<!-- src/pages/download.html -->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Downloads — George Buchan Consulting</title>
+  <meta name="description" content="Free brochures, guides and resources to deepen your reflection.">
+  <link rel="stylesheet" href="/george-buchan-consulting/src/css/output.css">
+</head>
+
+<body class="bg-background text-foreground">
+
+  <div id="header-container"></div>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="relative pt-40 pb-16 overflow-hidden bg-gradient-soft">
+      <div class="blur-blob bg-primary/25 w-[500px] h-[500px] -top-32 -left-40 animate-float"></div>
+      <div class="blur-blob bg-accent/20 w-[420px] h-[420px] -bottom-32 -right-20 animate-float"
+        style="animation-delay: 2s"></div>
+      <div class="relative max-w-4xl mx-auto px-6 lg:px-10 text-center">
+        <h1 class="font-display text-5xl lg:text-6xl font-bold" data-i18n="downloads-title"></h1>
+        <p class="mt-6 text-lg text-muted-foreground" data-i18n="downloads-sub"></p>
+      </div>
+    </section>
+
+    <!-- RESSOURCES -->
+    <section class="py-20">
+      <div class="max-w-6xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="downloads-container">
+        <!-- Les ressources sont générées par JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script type="module" src="/george-buchan-consulting/src/js/main.js"></script>
+</body>
+
+</html>

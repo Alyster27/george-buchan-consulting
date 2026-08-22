@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>George Buchan Consulting — Better understanding. Earlier decisions.</title>
+  <meta name="description"
+    content="Psychology and wellbeing consultancy in Switzerland. Teaching, organisational work, and individual reflection & guidance — FR/EN.">
+  <link rel="stylesheet" href="/george-buchan-consulting/src/css/output.css">
+</head>
+
+<body class="bg-white text-gray-900">
+
+  <div id="header-container"></div>
+
+  <main>
+    <!-- HERO - version corrigée -->
+    <section class="relative min-h-screen w-full overflow-hidden flex items-center">
+      <img src="src/assets/images/gee-intro.webp" alt="George Buchan"
+        class="absolute inset-0 w-full h-full object-cover object-[70%_center] md:object-center">
+      <div class="absolute inset-0 bg-gradient-to-r from-[#034c65]/85 via-[#1f6d5e]/60 to-transparent"></div>
+      <div
+        class="blur-blob bg-white/10 w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] -bottom-40 -right-20 animate-float">
+      </div>
+
+      <div class="relative max-w-6xl mx-auto px-6 lg:px-10 pt-32 pb-20 text-primary-foreground">
+        <div class="reveal max-w-2xl space-y-4">
+          <p class="text-base sm:text-lg leading-relaxed opacity-95" data-i18n="hero-p1"></p>
+          <p class="text-base sm:text-lg leading-relaxed opacity-95" data-i18n="hero-p2"></p>
+          <p class="text-base sm:text-lg leading-relaxed opacity-95" data-i18n="hero-p3"></p>
+          <p class="text-base sm:text-lg leading-relaxed opacity-95" data-i18n="hero-p4"></p>
+          <p class="font-display text-2xl sm:text-3xl lg:text-4xl font-bold pt-4 leading-tight" data-i18n="hero-tag">
+          </p>
+          <div class="flex flex-wrap gap-4 pt-6">
+            <a href="src/pages/services.html" data-link
+              class="inline-flex items-center gap-2 rounded-full bg-primary-foreground text-primary px-7 py-3.5 font-semibold shadow-glow hover:scale-[1.03] transition">
+              <span data-i18n="cta-services"></span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="src/pages/contact.html" data-link
+              class="inline-flex items-center gap-2 rounded-full border border-white/40 hover:bg-white/10 px-7 py-3.5 font-semibold transition">
+              <span data-i18n="cta-contact"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCOPE / 3 CARDS -->
+    <section class="relative py-28 bg-gradient-soft">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="reveal text-center max-w-2xl mx-auto mb-16">
+          <p class="text-xs uppercase tracking-[0.25em] text-primary font-semibold" data-i18n="scope-sub"></p>
+          <h2 class="mt-3 font-display text-4xl lg:text-5xl font-bold text-foreground" data-i18n="scope-title"></h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Card Teacher -->
+          <div class="reveal">
+            <button onclick="window.app.openModal('teacher')"
+              class="group block text-left w-full h-full rounded-2xl bg-card border border-border/60 hover:border-primary/40 hover:-translate-y-1.5 hover:shadow-glow transition-all duration-500 overflow-hidden">
+              <div class="aspect-[16/10] overflow-hidden">
+                <img src="src/assets/images/psych-teacher.webp" alt=""
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              </div>
+              <div class="p-7">
+                <div
+                  class="w-11 h-11 rounded-xl bg-gradient-hero text-primary-foreground flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c0 2 4 3 6 3s6-1 6-3v-5" />
+                  </svg>
+                </div>
+                <h3 class="font-display text-xl font-semibold text-foreground mb-2" data-i18n="c1-title"></h3>
+                <p class="text-sm text-muted-foreground leading-relaxed mb-4" data-i18n="c1-sum"></p>
+                <span
+                  class="inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all">
+                  <span data-i18n="cta-more"></span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+            </button>
+          </div>
+          <!-- Card Orga -->
+          <div class="reveal">
+            <button onclick="window.app.openModal('org')"
+              class="group block text-left w-full h-full rounded-2xl bg-card border border-border/60 hover:border-primary/40 hover:-translate-y-1.5 hover:shadow-glow transition-all duration-500 overflow-hidden">
+              <div class="aspect-[16/10] overflow-hidden">
+                <img src="src/assets/images/organisations.webp" alt=""
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              </div>
+              <div class="p-7">
+                <div
+                  class="w-11 h-11 rounded-xl bg-gradient-hero text-primary-foreground flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 21h18" />
+                    <path d="M5 21V7l8-4v18" />
+                    <path d="M19 21V11l-6-4" />
+                    <path d="M9 9v.01" />
+                    <path d="M9 12v.01" />
+                    <path d="M9 15v.01" />
+                    <path d="M9 18v.01" />
+                  </svg>
+                </div>
+                <h3 class="font-display text-xl font-semibold text-foreground mb-2" data-i18n="c2-title"></h3>
+                <p class="text-sm text-muted-foreground leading-relaxed mb-4" data-i18n="c2-sum"></p>
+                <span
+                  class="inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all">
+                  <span data-i18n="cta-more"></span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+            </button>
+          </div>
+          <!-- Card Individuel -->
+          <div class="reveal">
+            <button onclick="window.app.openModal('individual')"
+              class="group block text-left w-full h-full rounded-2xl bg-card border border-border/60 hover:border-primary/40 hover:-translate-y-1.5 hover:shadow-glow transition-all duration-500 overflow-hidden">
+              <div class="aspect-[16/10] overflow-hidden">
+                <img data-i18n-img="individuals" data-img-fr="src/assets/images/individuals-fr.webp"
+                  data-img-en="src/assets/images/individuals-en.webp" src="src/assets/images/individuals-fr.webp" alt=""
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              </div>
+              <div class="p-7">
+                <div
+                  class="w-11 h-11 rounded-xl bg-gradient-hero text-primary-foreground flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                </div>
+                <h3 class="font-display text-xl font-semibold text-foreground mb-2" data-i18n="c3-title"></h3>
+                <p class="text-sm text-muted-foreground leading-relaxed mb-4" data-i18n="c3-sum"></p>
+                <span
+                  class="inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all">
+                  <span data-i18n="cta-more"></span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT I DO -->
+    <section class="py-20">
+      <div class="max-w-5xl mx-auto px-6 lg:px-10">
+        <div class="reveal rounded-3xl overflow-hidden shadow-soft border border-border/60">
+          <img data-i18n-img="whatido" data-img-fr="src/assets/images/what-i-do-fr.webp"
+            data-img-en="src/assets/images/what-i-do-en.webp" src="src/assets/images/what-i-do-fr.webp"
+            alt="Ce que je fais" class="w-full h-auto">
+        </div>
+      </div>
+    </section>
+
+    <!-- VOLUNTARY -->
+    <section class="py-24">
+      <div class="max-w-4xl mx-auto px-6 lg:px-10">
+        <div class="reveal p-8 lg:p-12 rounded-3xl bg-card border border-border/60 shadow-soft text-center">
+          <div
+            class="w-14 h-14 rounded-full bg-gradient-hero text-primary-foreground mx-auto flex items-center justify-center mb-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-2xl lg:text-3xl font-bold" data-i18n="vol-title"></h3>
+          <p class="mt-5 text-base text-muted-foreground leading-relaxed max-w-2xl mx-auto" data-i18n="vol-text"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTICE -->
+    <section class="py-8">
+      <div class="max-w-4xl mx-auto px-6 lg:px-10">
+        <div
+          class="reveal p-6 lg:p-8 rounded-2xl border border-primary/25 bg-[color-mix(in_oklab,var(--deep-green)_5%,var(--background))]">
+          <p class="text-xs uppercase tracking-[0.25em] text-primary font-semibold mb-2" data-i18n="notice-title"></p>
+          <p class="text-sm lg:text-base text-foreground/80 leading-relaxed italic" data-i18n="notice-text"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="py-28 bg-gradient-soft">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="reveal">
+          <h2 class="text-center font-display text-4xl lg:text-5xl font-bold mb-16" data-i18n="why-title">Pourquoi me
+            choisir</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="reveal h-full rounded-2xl bg-card border border-border/60 hover:shadow-glow transition overflow-hidden flex flex-col">
+            <img data-i18n-img="academic" data-img-fr="src/assets/images/academic-foundation-fr.webp"
+              data-img-en="src/assets/images/academic-foundation-en.webp"
+              src="src/assets/images/academic-foundation-fr.webp" alt="" class="w-full h-auto object-contain">
+          </div>
+          <div
+            class="reveal h-full rounded-2xl bg-card border border-border/60 hover:shadow-glow transition overflow-hidden flex flex-col">
+            <img data-i18n-img="critical" data-img-fr="src/assets/images/critical-analysis-fr.webp"
+              data-img-en="src/assets/images/critical-analysis-en.webp"
+              src="src/assets/images/critical-analysis-fr.webp" alt="" class="w-full h-auto object-contain">
+          </div>
+          <div
+            class="reveal h-full rounded-2xl bg-card border border-border/60 hover:shadow-glow transition overflow-hidden flex flex-col">
+            <img data-i18n-img="integrity" data-img-fr="src/assets/images/pro-integrity-fr.webp"
+              data-img-en="src/assets/images/pro-integrity-en.webp" src="src/assets/images/pro-integrity-fr.webp" alt=""
+              class="w-full h-auto object-contain">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="py-28">
+      <div class="max-w-6xl mx-auto px-6 lg:px-10">
+        <div class="reveal">
+          <p class="text-xs uppercase tracking-[0.25em] text-primary font-semibold text-center" data-i18n="phil-title">
+          </p>
+          <h2 class="mt-3 text-center font-display text-4xl lg:text-5xl font-bold mb-14" data-i18n="phil-subtitle"></h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="reveal rounded-3xl overflow-hidden bg-card border border-border/60 shadow-soft">
+            <img src="src/assets/images/krishnamurti.webp" alt="Krishnamurti" class="w-full aspect-[4/5] object-cover">
+            <div class="p-8">
+              <p class="font-display text-lg lg:text-xl italic text-foreground leading-relaxed" data-i18n="phil-k"></p>
+              <p class="mt-4 text-sm uppercase tracking-[0.2em] text-muted-foreground" data-i18n="phil-kAuthor"></p>
+            </div>
+          </div>
+          <div class="reveal rounded-3xl overflow-hidden bg-card border border-border/60 shadow-soft">
+            <img src="src/assets/images/coffee.webp" alt="Coffee" class="w-full aspect-[4/5] object-cover">
+            <div class="p-8">
+              <p class="font-display text-lg lg:text-xl italic text-foreground leading-relaxed" data-i18n="phil-coffee">
+              </p>
+              <p class="mt-4 text-sm uppercase tracking-[0.2em] text-muted-foreground"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RATES -->
+    <section class="py-20 bg-gradient-soft">
+      <div class="max-w-4xl mx-auto px-6 lg:px-10">
+        <div
+          class="reveal p-10 lg:p-14 rounded-3xl bg-gradient-hero text-primary-foreground shadow-glow relative overflow-hidden">
+          <div class="blur-blob bg-white/20 w-72 h-72 -top-20 -right-20"></div>
+          <div class="relative">
+            <p class="text-xs uppercase tracking-[0.25em] opacity-80" data-i18n="rates-title"></p>
+            <div class="mt-5 space-y-4 text-base lg:text-lg leading-relaxed">
+              <p data-i18n="rates-p1"></p>
+              <p data-i18n="rates-p2"></p>
+              <p class="italic opacity-90" data-i18n="rates-p3"></p>
+            </div>
+            <a href="src/pages/contact.html" data-link
+              class="mt-8 inline-flex items-center gap-2 rounded-full bg-primary-foreground text-primary px-7 py-3.5 font-semibold hover:scale-[1.03] transition">
+              <span data-i18n="cta-contact"></span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL -->
+  <div id="modal-overlay" class="fixed inset-0 z-[100] flex items-center justify-center p-4 hidden"
+    onclick="window.app.closeModal()">
+    <div class="absolute inset-0 bg-foreground/60 backdrop-blur-sm"></div>
+    <div id="modal-content"
+      class="modal-content relative max-w-3xl w-full max-h-[90vh] overflow-y-auto rounded-3xl bg-background shadow-glow"
+      onclick="event.stopPropagation()">
+      <button onclick="window.app.closeModal()"
+        class="absolute top-4 right-4 w-10 h-10 rounded-full bg-background/90 border border-border hover:bg-primary hover:text-primary-foreground transition flex items-center justify-center z-10">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <img id="modal-img" src="" alt="" class="w-full aspect-[16/8] object-cover">
+      <div class="p-8 lg:p-10">
+        <h3 id="modal-title" class="font-display text-3xl font-bold text-foreground mb-6"></h3>
+        <div id="modal-body" class="space-y-4 text-base text-foreground/85 leading-relaxed"></div>
+        <div id="modal-expat" class="mt-6 p-6 rounded-2xl bg-secondary hidden">
+          <p class="font-display text-lg font-semibold text-foreground" data-i18n="c3-expat-title"></p>
+          <p class="mt-3 text-sm text-foreground/80 leading-relaxed" data-i18n="c3-expat-text"></p>
+        </div>
+        <a href="src/pages/services.html" data-link onclick="window.app.closeModal()"
+          class="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-hero text-primary-foreground px-6 py-3 font-semibold hover:scale-[1.03] transition">
+          <span data-i18n="cta-view-service"></span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-container"></div>
+
+  <script type="module" src="/george-buchan-consulting/src/js/main.js"></script>
+</body>
+
+</html>

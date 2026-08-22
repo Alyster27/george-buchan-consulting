@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /george-buchan-consulting/
+
+# Routes sans extension
+RewriteRule ^$ index.html [L]
+RewriteRule ^contact$ src/pages/contact.html [L]
+RewriteRule ^services$ src/pages/services.html [L]
+RewriteRule ^download$ src/pages/download.html [L]
+RewriteRule ^method$ src/pages/method.html [L]
+RewriteRule ^perspectives$ src/pages/perspectiv.html [L]

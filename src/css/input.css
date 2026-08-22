@@ -1,0 +1,142 @@
+/* src/css/input.css */
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@theme {
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-background: oklch(1 0 0);
+  --color-foreground: oklch(0.22 0.03 220);
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.22 0.03 220);
+  --color-primary: oklch(0.46 0.06 175);
+  --color-primary-foreground: oklch(0.99 0.005 90);
+  --color-secondary: oklch(0.96 0.01 200);
+  --color-secondary-foreground: oklch(0.38 0.07 230);
+  --color-muted: oklch(0.965 0.008 200);
+  --color-muted-foreground: oklch(0.48 0.02 220);
+  --color-accent: oklch(0.38 0.07 230);
+  --color-accent-foreground: oklch(0.99 0.005 90);
+  --color-border: oklch(0.92 0.012 200);
+  --color-deep-green: oklch(0.46 0.06 175);
+  --color-deep-blue: oklch(0.38 0.07 230);
+  --color-cream: oklch(0.985 0.008 90);
+
+  --shadow-soft: 0 10px 40px -10px color-mix(in oklab, var(--color-deep-blue) 18%, transparent);
+  --shadow-glow: 0 20px 60px -20px color-mix(in oklab, var(--color-deep-green) 30%, transparent);
+  --gradient-hero: linear-gradient(135deg, var(--color-deep-green), var(--color-deep-blue));
+  --gradient-soft: linear-gradient(180deg, oklch(0.99 0.005 180), oklch(0.97 0.012 200));
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.bg-gradient-hero {
+  background: var(--gradient-hero);
+}
+
+.bg-gradient-soft {
+  background: var(--gradient-soft);
+}
+
+.shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+.blur-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-20px) scale(1.03);
+  }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out both;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: rgba(3, 76, 101, 0.3);
+  border-radius: 3px;
+}
+
+#mobile-menu:not(.hidden) {
+  display: block;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
