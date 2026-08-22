@@ -14,7 +14,7 @@ function toggleMobileMenu() {
     if (menu) menu.classList.toggle('hidden');
     if (menuIcon) menuIcon.classList.toggle('hidden');
     if (closeIcon) closeIcon.classList.toggle('hidden');
-}
+};
 
 // Fonction pour les accordéons FAQ
 function toggleAccordion(index) {
@@ -29,7 +29,7 @@ function toggleAccordion(index) {
             if (chevron) chevron.classList.remove('rotate-180');
         }
     }
-}
+};
 
 // Fonction pour afficher/masquer les articles
 function toggleArticle(index) {
@@ -48,7 +48,7 @@ function toggleArticle(index) {
             if (btnText) btnText.textContent = t('cta-readMore');
         }
     }
-}
+};
 
 // Fonction pour générer la FAQ
 function renderFAQ() {
@@ -75,7 +75,7 @@ function renderFAQ() {
             </div>
         </div>
     `).join('');
-}
+};
 
 // Fonction pour générer les articles
 function renderArticles() {
@@ -110,7 +110,61 @@ function renderArticles() {
             </article>
         </div>
     `).join('');
-}
+};
+
+// Fonction pour générer les downloads
+function renderDownloads() {
+    const container = document.getElementById('downloads-container');
+    if (!container) return;
+
+    const sizes = ['1.2 MB', '0.9 MB', '0.8 MB', '1.1 MB', '0.7 MB', '1.0 MB'];
+    const downloadText = t('cta-download');
+
+    container.innerHTML = [1, 2, 3, 4, 5, 6].map((i, index) => `
+        <div class="reveal" data-delay="${index * 70}">
+            <div class="group h-full p-6 rounded-2xl bg-card border border-border/60 hover:border-primary/40 hover:-translate-y-1 hover:shadow-glow transition-all duration-500 flex flex-col">
+                <div class="flex items-start justify-between mb-5">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-hero text-primary-foreground flex items-center justify-center">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </div>
+                    <span class="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-secondary text-muted-foreground">PDF · ${sizes[index]}</span>
+                </div>
+                <h3 class="font-display text-lg font-semibold leading-snug">${t(`dl-${i}-title`)}</h3>
+                <p class="mt-2 text-sm text-muted-foreground leading-relaxed flex-1">${t(`dl-${i}-desc`)}</p>
+                <button class="mt-5 inline-flex items-center gap-2 self-start text-sm font-semibold text-primary hover:gap-3 transition-all">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    ${downloadText}
+                </button>
+            </div>
+        </div>
+    `).join('');
+};
+
+// Gestion du formulaire de contact
+function initContactForm() {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+    
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const fields = document.getElementById('form-fields');
+        const sent = document.getElementById('form-sent');
+        const btn = form.querySelector('button[type="submit"]');
+        const btnText = document.getElementById('send-btn-text');
+        
+        // Simuler l'envoi
+        btn.disabled = true;
+        btnText.textContent = '…';
+        
+        setTimeout(() => {
+            fields.classList.add('hidden');
+            sent.classList.remove('hidden');
+            btn.disabled = false;
+            btnText.textContent = t('cta-send');
+        }, 900);
+    });
+};
 
 // Exposer les fonctions globalement
 window.app = {
@@ -135,6 +189,8 @@ async function init() {
             setLanguage('fr');
             renderFAQ();
             renderArticles();
+            renderDownloads();
+            initContactForm();
             initReveal();
         });
     }
@@ -144,6 +200,8 @@ async function init() {
             setLanguage('en');
             renderFAQ();
             renderArticles();
+            renderDownloads();
+            initContactForm();
             initReveal();
         });
     }
@@ -153,6 +211,8 @@ async function init() {
     setLanguage(localStorage.getItem('gbc-lang') || 'fr');
     renderFAQ();
     renderArticles();
+    renderDownloads();
+    initContactForm();
     initReveal();
 
     // Header scroll effect
@@ -172,6 +232,8 @@ async function init() {
     window.addEventListener('languageChanged', () => {
         renderFAQ();
         renderArticles();
+        renderDownloads();
+        initContactForm();
         initReveal();
     });
 }

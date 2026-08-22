@@ -152,6 +152,49 @@ export const translations = {
         'article-3-body3': 'Peut-être que le bien-être ressemble à cela : une danse, jamais figée, entre ce qui pèse et ce qui élève.',
 
         // ============================================================
+        // PAGE DOWNLOADS
+        // ============================================================
+        'downloads-title': 'Téléchargements',
+        'downloads-sub': 'Brochures, guides et ressources à télécharger gratuitement.',
+        'cta-download': 'Télécharger',
+
+        // Ressources
+        'dl-1-title': 'Guide : Introduction à la psychologie humaniste',
+        'dl-1-desc': 'Une exploration accessible des fondements et des praticiens majeurs.',
+        'dl-2-title': 'Brochure : Bien-être en entreprise',
+        'dl-2-desc': 'Notre programme pour les organisations en quête de durabilité humaine.',
+        'dl-3-title': 'Brochure : Détox identitaire',
+        'dl-3-desc': 'Un parcours réflexif pour questionner ce qui ne correspond plus.',
+        'dl-4-title': 'Guide : Pleine conscience au quotidien',
+        'dl-4-desc': 'Pratiques simples, ancrées dans la recherche.',
+        'dl-5-title': 'Brochure : Cours d\'anglais – Confiance en soi',
+        'dl-5-desc': 'Communication, leadership et prise de parole publique.',
+        'dl-6-title': 'Guide : Bien-être des expatriés',
+        'dl-6-desc': 'Repères pour traverser les transitions interculturelles.',
+
+        // ============================================================
+        // PAGE CONTACT
+        // ============================================================
+        'contact-title': 'Contactez-moi',
+        'contact-p1': 'Chaque travail commence par une conversation.',
+        'contact-p2': 'Que vous cherchiez une réflexion et un accompagnement individuel, un soutien organisationnel, une formation en psychologie, ou que vous vous demandiez simplement si mon travail correspond à votre situation, je serais ravi d\'avoir de vos nouvelles.',
+        'contact-p3': 'Veuillez utiliser le formulaire de contact ci-dessous ou me joindre directement :',
+        'contact-name': 'Nom',
+        'contact-email': 'Email',
+        'contact-subject': 'Sujet',
+        'contact-message': 'Message',
+        'contact-subj-individual': 'Bien-être individuel',
+        'contact-subj-corporate': 'Organisation',
+        'contact-subj-teaching': 'Enseignement',
+        'contact-subj-expat': 'Expatriation',
+        'contact-subj-other': 'Autre',
+        'contact-confirm': 'Merci ! Votre message a bien été envoyé.',
+        'contact-info': 'Coordonnées',
+        'contact-location': 'Suisse',
+        'contact-cta': 'Faisons le premier pas ensemble.',
+        'cta-send': 'Envoyer',
+
+        // ============================================================
         // FOOTER
         // ============================================================
         'footer-tag': 'Consultance en psychologie et bien-être — Suisse.',
@@ -309,6 +352,48 @@ export const translations = {
         'article-3-body1': 'Dharamshala lives in two registers at once: the rigour of a millennia-old practice and the lightness of laughter at the corner of an alley.',
         'article-3-body2': 'This coexistence is not a paradox — it is a lesson. Seriousness does not exclude grace, and grace does not exempt one from work.',
         'article-3-body3': 'Perhaps wellbeing looks like this: a dance, never fixed, between what weighs us down and what lifts us up.',
+
+        // ============================================================
+        // PAGE DOWNLOADS
+        // ============================================================
+        'downloads-title': 'Downloads',
+        'downloads-sub': 'Brochures, guides and resources available for free download.',
+        'cta-download': 'Download',
+
+        'dl-1-title': 'Guide: Introduction to Humanistic Psychology',
+        'dl-1-desc': 'An accessible exploration of foundations and key practitioners.',
+        'dl-2-title': 'Brochure: Corporate Wellbeing',
+        'dl-2-desc': 'Our programme for organisations seeking human sustainability.',
+        'dl-3-title': 'Brochure: Identity Detox',
+        'dl-3-desc': 'A reflective journey to question what no longer fits.',
+        'dl-4-title': 'Guide: Everyday Mindfulness',
+        'dl-4-desc': 'Simple practices, grounded in research.',
+        'dl-5-title': 'Brochure: English Classes – Self-Confidence',
+        'dl-5-desc': 'Communication, leadership, and public speaking.',
+        'dl-6-title': 'Guide: Expat Wellbeing',
+        'dl-6-desc': 'Markers for navigating cross-cultural transitions.',
+
+        // ============================================================
+        // PAGE CONTACT
+        // ============================================================
+        'contact-title': 'Contact Me',
+        'contact-p1': 'Every piece of work begins with a conversation.',
+        'contact-p2': 'Whether you\'re looking for individual reflection and guidance, organisational support, psychology training, or simply wondering whether my work is the right fit for your situation, I\'d be pleased to hear from you.',
+        'contact-p3': 'Please use the contact form below or get in touch directly:',
+        'contact-name': 'Name',
+        'contact-email': 'Email',
+        'contact-subject': 'Subject',
+        'contact-message': 'Message',
+        'contact-subj-individual': 'Individual Wellbeing',
+        'contact-subj-corporate': 'Organisation',
+        'contact-subj-teaching': 'Teaching',
+        'contact-subj-expat': 'Expatriation',
+        'contact-subj-other': 'Other',
+        'contact-confirm': 'Thank you! Your message has been sent.',
+        'contact-info': 'Contact info',
+        'contact-location': 'Switzerland',
+        'contact-cta': 'Let\'s take the first step together.',
+        'cta-send': 'Send',
 
         // ============================================================
         // FOOTER
