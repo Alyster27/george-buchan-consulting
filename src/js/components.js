@@ -1,7 +1,9 @@
-// src/js/components.js
 export async function loadComponent(componentName, targetId) {
     try {
-        const response = await fetch(`/george-buchan-consulting/src/components/${componentName}.html`);
+        const path = window.location.pathname;
+        const prefix = path.includes('/george-buchan-consulting/') ? '/george-buchan-consulting' : '';
+        
+        const response = await fetch(`${prefix}/src/components/${componentName}.html`);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const html = await response.text();
         const target = document.getElementById(targetId);

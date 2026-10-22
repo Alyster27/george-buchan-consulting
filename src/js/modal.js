@@ -14,19 +14,19 @@ function updateModalData() {
     window._modalData = {
         teacher: {
             title: t('c1-title'),
-            img: 'src/assets/images/psych-teacher.jpg',
+            img: 'src/assets/images/psych-teacher.webp',
             body: [t('c1-body1'), t('c1-body2'), t('c1-body3'), t('c1-body4')],
             expat: false
         },
         org: {
             title: t('c2-title'),
-            img: 'src/assets/images/organisations.png',
+            img: 'src/assets/images/organisations.webp',
             body: [t('c2-body1'), t('c2-body2'), t('c2-body3'), t('c2-body4')],
             expat: false
         },
         individual: {
             title: t('c3-title'),
-            img: lang === 'fr' ? 'src/assets/images/individuals_FR.png' : 'src/assets/images/individuals_EN.png',
+            img: 'src/assets/images/individuals.webp',
             body: [t('c3-body1'), t('c3-body2'), t('c3-body3'), t('c3-body4')],
             expat: true
         }

@@ -128,23 +128,24 @@ export const translations = {
         'ins-sub': 'Vidéos et réflexions pour nourrir la compréhension',
         'ins-videos': 'Authentic Selves — Vidéos',
         'ins-videosSub': 'Découvrez la chaîne YouTube dédiée à l\'exploration de l\'authenticité.',
-        'ins-podcast-title': 'Podcast — Bientôt disponible',
-        'ins-podcast-text': 'P.S. Nous deux d\'en haut… podcast à venir !',
         'ins-articles': 'Articles récents',
 
         // PAGE PERSPECTIVES — Articles
+        'article-1-img': '../../src/assets/images/teddy-bears-website.webp',
         'article-1-title': 'L\'espace d\'absence mutuelle : là où vit le potentiel',
         'article-1-excerpt': 'Entre deux personnes, il existe un espace qui n\'appartient à personne — et c\'est précisément là que le possible commence.',
         'article-1-body1': 'Nous parlons souvent de présence comme d\'une vertu : être là, attentif, à l\'écoute. Mais peut-être que ce qui rend la rencontre féconde, c\'est moins ce que chacun apporte que ce que les deux acceptent de suspendre.',
         'article-1-body2': 'Dans cet espace d\'absence mutuelle, les rôles se relâchent, les histoires perdent leur urgence, et quelque chose de plus discret peut émerger — une intuition, une question, un silence partagé.',
         'article-1-body3': 'C\'est dans ce vide habité que naît la possibilité d\'un véritable changement, non comme conquête, mais comme reconnaissance.',
 
+        'article-2-img': '../../src/assets/images/broken-mirror-website.webp',
         'article-2-title': 'Affronter son ego avec réalisme — pourquoi tout le monde guérit mais personne n\'est guéri ?',
         'article-2-excerpt': 'Le langage de la guérison est partout. Mais que veut-on dire, vraiment, quand on dit qu\'on travaille sur soi ?',
         'article-2-body1': 'L\'ego n\'est pas un ennemi à abattre, ni un masque à arracher. C\'est une structure utile, parfois rigide, qui nous aide à tenir debout dans le monde.',
         'article-2-body2': 'Le travail réflexif ne consiste pas à le dissoudre, mais à reconnaître quand il prend trop de place — quand il défend au lieu de relier.',
         'article-2-body3': 'Guérir, peut-être, c\'est apprendre à vivre avec ses contradictions sans en faire un drame, et à les laisser se transformer doucement.',
 
+        'article-3-img': '../../src/assets/images/dharamshala-website.webp',
         'article-3-title': 'La danse de la légèreté et de l\'intensité : réflexions sur la dualité de Dharamshala',
         'article-3-excerpt': 'Certains lieux nous enseignent qu\'on n\'a pas à choisir entre la profondeur et la joie.',
         'article-3-body1': 'Dharamshala se vit dans deux registres simultanés : la rigueur d\'une pratique millénaire et la légèreté d\'un éclat de rire au coin d\'une ruelle.',
@@ -190,7 +191,7 @@ export const translations = {
         'contact-subj-other': 'Autre',
         'contact-confirm': 'Merci ! Votre message a bien été envoyé.',
         'contact-info': 'Coordonnées',
-        'contact-location': 'Suisse',
+        'contact-location': 'Suisse romande',
         'contact-cta': 'Faisons le premier pas ensemble.',
         'cta-send': 'Envoyer',
 
@@ -330,23 +331,24 @@ export const translations = {
         'ins-sub': 'Videos and reflections to deepen understanding',
         'ins-videos': 'Authentic Selves — Videos',
         'ins-videosSub': 'Explore the YouTube channel dedicated to authenticity.',
-        'ins-podcast-title': 'Podcast — Coming Soon',
-        'ins-podcast-text': 'P.S. Us two above… podcast coming soon!',
         'ins-articles': 'Recent articles',
 
         // PAGE PERSPECTIVES — Articles
+        'article-1-img': '../../src/assets/images/teddy-bears-website.webp',
         'article-1-title': 'The Space of Mutual Absence: Where Potential Lives',
         'article-1-excerpt': 'Between two people lies a space that belongs to no one — and that is precisely where the possible begins.',
         'article-1-body1': 'We often speak of presence as a virtue: being there, attentive, listening. But perhaps what makes an encounter fertile is less what each brings than what both agree to suspend.',
         'article-1-body2': 'In this space of mutual absence, roles loosen, stories lose their urgency, and something quieter can emerge — an intuition, a question, a shared silence.',
         'article-1-body3': 'It is in this inhabited emptiness that the possibility of real change is born — not as conquest, but as recognition.',
 
+        'article-2-img': '../../src/assets/images/broken-mirror-website.webp',
         'article-2-title': 'Dealing with your ego realistically — why is everyone healing but nobody is healed?',
         'article-2-excerpt': 'The language of healing is everywhere. But what do we really mean when we say we are working on ourselves?',
         'article-2-body1': 'The ego is not an enemy to defeat, nor a mask to tear off. It is a useful, sometimes rigid structure that helps us stand in the world.',
         'article-2-body2': 'Reflective work is not about dissolving it, but about noticing when it takes up too much space — when it defends rather than connects.',
         'article-2-body3': 'Perhaps healing is learning to live with our contradictions without dramatising them, and letting them quietly transform.',
 
+        'article-3-img': '../../src/assets/images/dharamshala-website.webp',
         'article-3-title': 'The Dance of Lightness and Intensity: Reflections on the Duality of Dharamshala',
         'article-3-excerpt': 'Some places teach us that we do not have to choose between depth and joy.',
         'article-3-body1': 'Dharamshala lives in two registers at once: the rigour of a millennia-old practice and the lightness of laughter at the corner of an alley.',
@@ -391,7 +393,7 @@ export const translations = {
         'contact-subj-other': 'Other',
         'contact-confirm': 'Thank you! Your message has been sent.',
         'contact-info': 'Contact info',
-        'contact-location': 'Switzerland',
+        'contact-location': 'French-speaking Switzerland',
         'contact-cta': 'Let\'s take the first step together.',
         'cta-send': 'Send',
 

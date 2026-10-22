@@ -24,11 +24,15 @@ function updateUILanguage() {
 
     if (btnFr && btnEn) {
         if (currentLang === 'fr') {
-            btnFr.className = 'px-3 py-1.5 transition bg-[#034c65] text-white';
-            btnEn.className = 'px-3 py-1.5 transition hover:bg-gray-100';
+            btnFr.classList.add('bg-[#034c65]', 'text-white');
+            btnFr.classList.remove('hover:bg-gray-100');
+            btnEn.classList.remove('bg-[#034c65]', 'text-white');
+            btnEn.classList.add('hover:bg-gray-100');
         } else {
-            btnFr.className = 'px-3 py-1.5 transition hover:bg-gray-100';
-            btnEn.className = 'px-3 py-1.5 transition bg-[#034c65] text-white';
+            btnEn.classList.add('bg-[#034c65]', 'text-white');
+            btnEn.classList.remove('hover:bg-gray-100');
+            btnFr.classList.remove('bg-[#034c65]', 'text-white');
+            btnFr.classList.add('hover:bg-gray-100');
         }
     }
 

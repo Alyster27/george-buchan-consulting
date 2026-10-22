@@ -66,7 +66,7 @@ function renderFAQ() {
 
     container.innerHTML = faqs.map((f, i) => `
         <div class="bg-card rounded-2xl border border-border/60 overflow-hidden transition hover:border-primary/40">
-            <button onclick="window.app.toggleAccordion(${i})" class="w-full flex items-center justify-between gap-4 p-6 text-left">
+            <button onclick="window.app.toggleAccordion(${i})" class="w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer">
                 <span class="font-display text-base lg:text-lg font-semibold">${f.q}</span>
                 <svg id="faq-chevron-${i}" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary shrink-0 transition-transform"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
@@ -88,21 +88,22 @@ function renderArticles() {
     const articles = [1, 2, 3].map(i => ({
         title: t(`article-${i}-title`),
         excerpt: t(`article-${i}-excerpt`),
+        img: t(`article-${i}-img`),
         body: [t(`article-${i}-body1`), t(`article-${i}-body2`), t(`article-${i}-body3`)]
     }));
 
     container.innerHTML = articles.map((p, i) => `
         <div class="reveal" data-delay="${i * 80}">
             <article class="group bg-card rounded-2xl overflow-hidden border border-border/60 hover:shadow-glow hover:-translate-y-1 transition-all duration-500 h-full flex flex-col">
-                <div class="aspect-[16/10] bg-secondary flex items-center justify-center">
-                    <span class="text-muted-foreground text-sm">Illustration</span>
+                <div class="aspect-[16/10] overflow-hidden">
+                    <img src="${p.img}" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                 </div>
                 <div class="p-6 flex-1 flex flex-col">
                     <p class="text-xs text-muted-foreground">${new Date(['2025-04-12', '2025-03-02', '2025-01-20'][i]).toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-GB')}</p>
                     <h3 class="mt-2 font-display text-lg font-semibold leading-snug group-hover:text-primary transition">${p.title}</h3>
                     <p class="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">${p.excerpt}</p>
                     <div id="article-body-${i}" class="mt-4 space-y-3 text-sm text-foreground/85 leading-relaxed hidden"></div>
-                    <button onclick="window.app.toggleArticle(${i})" class="mt-5 inline-flex items-center gap-1 self-start text-sm font-semibold text-primary hover:gap-2 transition-all">
+                    <button onclick="window.app.toggleArticle(${i})" class="mt-5 inline-flex items-center gap-1 self-start text-sm font-semibold text-primary hover:gap-2 transition-all cursor-pointer">
                         <span id="article-btn-text-${i}">${readMore}</span>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </button>
@@ -131,7 +132,7 @@ function renderDownloads() {
                 </div>
                 <h3 class="font-display text-lg font-semibold leading-snug">${t(`dl-${i}-title`)}</h3>
                 <p class="mt-2 text-sm text-muted-foreground leading-relaxed flex-1">${t(`dl-${i}-desc`)}</p>
-                <button class="mt-5 inline-flex items-center gap-2 self-start text-sm font-semibold text-primary hover:gap-3 transition-all">
+                <button class="mt-5 inline-flex items-center gap-2 self-start text-sm font-semibold text-primary hover:gap-3 transition-all cursor-pointer">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                     ${downloadText}
                 </button>
@@ -179,6 +180,25 @@ window.app = {
 
 async function init() {
     await loadAllComponents();
+
+    // Corriger les liens du header/footer injectés
+    const isInSubfolder = window.location.pathname.includes('/src/pages/');
+    const prefix = isInSubfolder ? '../../' : '';
+
+    document.querySelectorAll('#header-container a[href^="src/"], #footer-container a[href^="src/"]').forEach(el => {
+        el.setAttribute('href', prefix + el.getAttribute('href'));
+    });
+    document.querySelectorAll('#header-container img[src^="src/"], #footer-container img[src^="src/"]').forEach(el => {
+        el.setAttribute('src', prefix + el.getAttribute('src'));
+    });
+    document.querySelectorAll('#header-container a[href="index.html"], #footer-container a[href="index.html"]').forEach(el => {
+        el.setAttribute('href', isInSubfolder ? '../../index.html' : 'index.html');
+    });
+
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    if (menuBtn) {
+        menuBtn.addEventListener('click', toggleMobileMenu);
+    }
     
     // Attacher les événements aux boutons de langue
     const btnFr = document.getElementById('btn-fr');
