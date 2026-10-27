@@ -35,6 +35,7 @@ function toggleAccordion(index) {
 function toggleArticle(index) {
     const body = document.getElementById(`article-body-${index}`);
     const btnText = document.getElementById(`article-btn-text-${index}`);
+    const pdfLink = document.getElementById(`article-pdf-${index}`);
     
     if (body) {
         if (body.classList.contains('hidden')) {
@@ -43,9 +44,11 @@ function toggleArticle(index) {
             body.classList.remove('hidden');
             body.classList.add('animate-fade-in');
             if (btnText) btnText.textContent = '—';
+            if (pdfLink) pdfLink.classList.remove('hidden');
         } else {
             body.classList.add('hidden');
             if (btnText) btnText.textContent = t('cta-readMore');
+            if (pdfLink) pdfLink.classList.add('hidden');
         }
     }
 };
@@ -89,6 +92,7 @@ function renderArticles() {
         title: t(`article-${i}-title`),
         excerpt: t(`article-${i}-excerpt`),
         img: t(`article-${i}-img`),
+        pdf: t(`article-${i}-pdf`),
         body: [t(`article-${i}-body1`), t(`article-${i}-body2`), t(`article-${i}-body3`)]
     }));
 
@@ -103,25 +107,31 @@ function renderArticles() {
                     <h3 class="mt-2 font-display text-lg font-semibold leading-snug group-hover:text-primary transition">${p.title}</h3>
                     <p class="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">${p.excerpt}</p>
                     <div id="article-body-${i}" class="mt-4 space-y-3 text-sm text-foreground/85 leading-relaxed hidden"></div>
-                    <button onclick="window.app.toggleArticle(${i})" class="mt-5 inline-flex items-center gap-1 self-start text-sm font-semibold text-primary hover:gap-2 transition-all cursor-pointer">
-                        <span id="article-btn-text-${i}">${readMore}</span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </button>
+                    <div class="mt-5 flex items-center justify-between gap-3">
+                        <button onclick="window.app.toggleArticle(${i})" class="inline-flex items-center gap-1 self-start text-sm font-semibold text-primary hover:gap-2 transition-all cursor-pointer">
+                            <span id="article-btn-text-${i}">${readMore}</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                        <a href="${p.pdf}" target="_blank" rel="noopener noreferrer" id="article-pdf-${i}" class="hidden inline-flex items-center gap-1 text-sm font-semibold text-primary hover:gap-2 transition-all cursor-pointer">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            ${t('cta-download-pdf')}
+                        </a>
+                    </div>
                 </div>
             </article>
         </div>
     `).join('');
-};
+}
 
 // Fonction pour générer les downloads
 function renderDownloads() {
     const container = document.getElementById('downloads-container');
     if (!container) return;
 
-    const sizes = ['1.2 MB', '0.9 MB', '0.8 MB', '1.1 MB', '0.7 MB', '1.0 MB'];
+    const sizes = ['135 Ko', '685 Ko', '475 Ko', '945 ko'];
     const downloadText = t('cta-download');
 
-    container.innerHTML = [1, 2, 3, 4, 5, 6].map((i, index) => `
+    container.innerHTML = [1, 2, 3, 4].map((i, index) => `
         <div class="reveal" data-delay="${index * 70}">
             <div class="group h-full p-6 rounded-2xl bg-card border border-border/60 hover:border-primary/40 hover:-translate-y-1 hover:shadow-glow transition-all duration-500 flex flex-col">
                 <div class="flex items-start justify-between mb-5">
@@ -132,10 +142,10 @@ function renderDownloads() {
                 </div>
                 <h3 class="font-display text-lg font-semibold leading-snug">${t(`dl-${i}-title`)}</h3>
                 <p class="mt-2 text-sm text-muted-foreground leading-relaxed flex-1">${t(`dl-${i}-desc`)}</p>
-                <button class="mt-5 inline-flex items-center gap-2 self-start text-sm font-semibold text-primary hover:gap-3 transition-all cursor-pointer">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    ${downloadText}
-                </button>
+                <a href="${t(`dl-${i}-pdf`)}" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 self-start text-sm font-semibold text-primary hover:gap-3 transition-all cursor-pointer">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    ${downloadText}
+                </a>
             </div>
         </div>
     `).join('');
